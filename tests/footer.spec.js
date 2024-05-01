@@ -9,7 +9,7 @@ import { test, expect } from '@playwright/test'
 // Courses test will implemented when link is added to the footer
 
 
-// Clicks the footer Episodes link and asserts the Episodes URL and heading
+// Clicks the footer Terms of Service link and asserts the Terms of Servoce URL and heading
 test('Footer "Terms of Service" link takes user to the Terms of Service page', async ({page}) => {
     // Navigate to webpage
     await page.goto('http://synthesis-workshop.com.s3-website-us-east-1.amazonaws.com/')
