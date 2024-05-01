@@ -10,6 +10,18 @@ import { test, expect } from '@playwright/test'
 
 
 // Clicks the footer Episodes link and asserts the Episodes URL and heading
+test('Footer "Terms of Service" link takes user to the Terms of Service page', async ({page}) => {
+    // Navigate to webpage
+    await page.goto('http://synthesis-workshop.com.s3-website-us-east-1.amazonaws.com/')
+    // Click the episodes link in footer
+    await page.getByRole('contentinfo').getByRole('link', { name: 'Terms of Service' }).click()
+    // assert the episodes URL
+    await expect(page).toHaveURL('http://synthesis-workshop.com.s3-website-us-east-1.amazonaws.com/terms-of-service')
+    // assert the episodes heading text
+    await expect(page.getByRole('heading', { name: 'Terms of Service' })).toBeVisible()
+});
+
+// Clicks the footer Episodes link and asserts the Episodes URL and heading
 test('Footer "Episodes" link takes user to Episodes section', async ({page}) => {
     // Navigate to webpage
     await page.goto('http://synthesis-workshop.com.s3-website-us-east-1.amazonaws.com/')

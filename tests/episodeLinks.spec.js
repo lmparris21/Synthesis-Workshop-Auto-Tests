@@ -88,7 +88,7 @@ test('Total Synthesis of (+)-Ineleganolide Episode Link ↗" hyperlink', async (
     // wait for the new page to load
     await newPage.waitForLoadState()
     // assert the correct URL has been opened
-    await expect(newPage).toHaveURL('https://www.youtube.com/watch?v=TLS74_QcxgQ')
+    await expect(newPage).toHaveURL('https://www.youtube.com/watch?v=76shNLja1uE')
     // close the new tab
     await newPage.close()
 });
